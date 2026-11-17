@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Temperature Monitoring System | Cici Sui</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="project-body">
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+
+        <a href="../index.html" class="logo">cicisui</a>
+
+        <nav class="nav-links">
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#experience">Experience</a>
+            <a href="../index.html#skills">Skills</a>
+            <a href="../index.html#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <main class="project-page">
+
+        <!-- PROJECT INTRO -->
+        <section class="project-intro">
+
+            <p class="project-label">
+                EMBEDDED SYSTEMS · FALL 2025
+            </p>
+
+            <h1>Temperature Monitoring System</h1>
+
+            <p class="project-subtitle">
+                Arduino-Based Temperature Monitoring & Alert Device
+            </p>
+
+            <div class="project-details">
+
+                <div>
+                    <span>PROJECT</span>
+                    <p>EK131 Introduction to Engineering</p>
+                </div>
+
+                <div>
+                    <span>INSTITUTION</span>
+                    <p>Boston University</p>
+                </div>
+
+                <div>
+                    <span>TECHNOLOGIES</span>
+                    <p>Arduino · C++ · CAD · Electronics</p>
+                </div>
+
+            </div>
+
+            <div class="project-image">
+
+                <img
+                    src="../images/temperature-monitoring-system/final-box-exterior.png"
+                    alt="Final temperature monitoring system prototype"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- OVERVIEW -->
+        <section class="project-section">
+
+            <p class="section-number">01 / PROJECT OVERVIEW</p>
+
+            <h2>Real-Time Temperature Monitoring</h2>
+
+            <p>
+                This project involved designing and building a portable,
+                Arduino-based temperature monitoring device capable of
+                measuring ambient temperature and providing both visual
+                and audible feedback.
+            </p>
+
+            <p>
+                The system uses a TMP36 analog temperature sensor
+                to continuously monitor the surrounding environment.
+                Temperature measurements are processed by an Arduino
+                Uno and displayed in Fahrenheit on a 16×2 LCD screen.
+            </p>
+
+            <p>
+                A green LED indicates that the device is powered on,
+                while a red LED and piezo buzzer activate when the
+                measured temperature exceeds the programmed safe range.
+                The system is powered by a 9V battery and enclosed
+                in a compact ABS housing.
+            </p>
+
+            <div class="spec-grid">
+
+                <div>
+                    <h3>TMP36</h3>
+                    <p>Temperature Sensor</p>
+                </div>
+
+                <div>
+                    <h3>16×2</h3>
+                    <p>LCD Display</p>
+                </div>
+
+                <div>
+                    <h3>9V</h3>
+                    <p>Battery Supply</p>
+                </div>
+
+                <div>
+                    <h3>80–85°F</h3>
+                    <p>Programmed Alert Limits</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CIRCUIT DESIGN -->
+        <section class="project-section">
+
+            <p class="section-number">02 / ELECTRICAL DESIGN</p>
+
+            <h2>Circuit Architecture & Component Integration</h2>
+
+            <p>
+                The electrical system is centered around an Arduino
+                Uno R3 microcontroller, which reads analog voltage
+                signals from the TMP36 sensor and controls the
+                display and warning indicators.
+            </p>
+
+            <p>
+                The TMP36 sensor is connected to analog input A0.
+                Its output voltage is converted into a temperature
+                measurement through software.
+            </p>
+
+            <p>
+                An I2C interface is used to communicate with the
+                LCD display, reducing the number of connections
+                required between the display and microcontroller.
+            </p>
+
+            <div class="project-image">
+
+                <img
+                    src="../images/temperature-monitoring-system/wiring-tinkercad.png"
+                    alt="Arduino temperature monitoring circuit diagram"
+                    loading="lazy"
+                >
+
+            </div>
+
+            <h3>Electronic Components</h3>
+
+            <div class="nozzle-components">
+
+                <div class="component-header">
+                    <span>COMPONENT</span>
+                    <span>QUANTITY</span>
+                </div>
+
+                <div>
+                    <span>Arduino Uno R3</span>
+                    <span>1</span>
+                </div>
+
+                <div>
+                    <span>TMP36 Temperature Sensor</span>
+                    <span>1</span>
+                </div>
+
+                <div>
+                    <span>16×2 I2C LCD Display</span>
+                    <span>1</span>
+                </div>
+
+                <div>
+                    <span>Green LED</span>
+                    <span>1</span>
+                </div>
+
+                <div>
+                    <span>Red LED</span>
+                    <span>1</span>
+                </div>
+
+                <div>
+                    <span>Piezo Buzzer</span>
+                    <span>1</span>
+                </div>
+
+                <div>
+                    <span>1 kΩ Resistor</span>
+                    <span>1</span>
+                </div>
+
+                <div>
+                    <span>220 Ω Resistor</span>
+                    <span>1</span>
+                </div>
+
+                <div>
+                    <span>9V Battery & Connector</span>
+                    <span>1</span>
+                </div>
+
+                <div>
+                    <span>Power Switch</span>
+                    <span>1</span>
+                </div>
+
+            </div>
+
+            <h3>Electrical Integration</h3>
+
+            <p>
+                The Arduino provides regulated 5V power to the
+                electronic components. The green LED functions
+                as a power indicator, while the red LED and
+                buzzer provide temperature warnings.
+            </p>
+
+            <p>
+                A combination of jumper wires and 22 AWG
+                solid-core wire was used for electrical
+                connections. Solid-core wire was selected
+                for permanent connections because of its
+                greater mechanical durability.
+            </p>
+
+        </section>
+
+
+        <!-- SOFTWARE -->
+        <section class="project-section">
+
+            <p class="section-number">03 / SOFTWARE DEVELOPMENT</p>
+
+            <h2>Arduino Programming & Temperature Control</h2>
+
+            <p>
+                The system was programmed using Arduino C++.
+                The software continuously reads the analog
+                output of the TMP36 sensor, converts the
+                voltage into temperature, and updates
+                the LCD display.
+            </p>
+
+            <p>
+                The temperature conversion uses the
+                TMP36 sensor's voltage offset and
+                temperature sensitivity.
+            </p>
+
+            <h3>Temperature Conversion</h3>
+
+            <div class="temperature-equation">
+
+                <p>
+                    V<sub>sensor</sub> =
+                    Analog Reading × (5V / 1024)
+                </p>
+
+                <p>
+                    T<sub>°C</sub> =
+                    (V<sub>sensor</sub> − 0.5V) × 100
+                </p>
+
+                <p>
+                    T<sub>°F</sub> =
+                    (T<sub>°C</sub> × 1.8) + 32
+                </p>
+
+            </div>
+
+            <h3>Temperature Alert Logic</h3>
+
+            <p>
+                The program compares the measured temperature
+                against predefined thresholds.
+            </p>
+
+            <p>
+                When the temperature falls below 80°F
+                or rises above 85°F, the red LED and
+                buzzer activate to alert the user.
+            </p>
+
+            <p>
+                The LCD continuously displays the
+                current temperature in Fahrenheit,
+                allowing the user to monitor
+                environmental conditions.
+            </p>
+
+            <h3>Arduino Source Code</h3>
+
+            <div class="temperature-image-grid">
+
+                <figure>
+                    <img
+                        src="../images/temperature-monitoring-system/arduino-code-1.png"
+                        alt="Arduino temperature monitoring code part one"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        Sensor initialization, analog input,
+                        and temperature conversion.
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img
+                        src="../images/temperature-monitoring-system/arduino-code-2.png"
+                        alt="Arduino temperature monitoring code part two"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        Temperature threshold detection
+                        and warning control.
+                    </figcaption>
+                </figure>
+
+            </div>
+
+        </section>
+
+
+        <!-- MECHANICAL DESIGN -->
+        <section class="project-section">
+
+            <p class="section-number">04 / MECHANICAL DESIGN</p>
+
+            <h2>Enclosure Design & CAD Modeling</h2>
+
+            <p>
+                A compact ABS enclosure was used to house
+                the Arduino, battery, wiring, and electronic
+                components.
+            </p>
+
+            <p>
+                The enclosure was designed to provide
+                external access to the power switch,
+                LCD display, temperature sensor,
+                LED indicators, and buzzer while
+                protecting the internal circuitry.
+            </p>
+
+            <p>
+                CAD modeling was used to plan component
+                placement, mounting locations, and
+                enclosure openings before assembly.
+            </p>
+
+            <div class="temperature-image-grid">
+
+                <figure>
+                    <img
+                        src="../images/temperature-monitoring-system/box-full-cad.png"
+                        alt="Complete CAD model of the temperature monitoring enclosure"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        Full enclosure CAD model.
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img
+                        src="../images/temperature-monitoring-system/box-top-cad.png"
+                        alt="Top view CAD model of the enclosure"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        Enclosure top-view CAD model.
+                    </figcaption>
+                </figure>
+
+            </div>
+
+            <h3>Enclosure Dimensions</h3>
+
+            <div class="spec-grid">
+
+                <div>
+                    <h3>146.5</h3>
+                    <p>Width (mm)</p>
+                </div>
+
+                <div>
+                    <h3>119.8</h3>
+                    <p>Length (mm)</p>
+                </div>
+
+                <div>
+                    <h3>57.2</h3>
+                    <p>Height (mm)</p>
+                </div>
+
+                <div>
+                    <h3>ABS</h3>
+                    <p>Enclosure Material</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FINAL ASSEMBLY -->
+        <section class="project-section">
+
+            <p class="section-number">05 / FINAL PROTOTYPE</p>
+
+            <h2>Hardware Assembly & Integration</h2>
+
+            <p>
+                The final prototype integrates the Arduino
+                Uno, TMP36 sensor, LCD display, power
+                supply, and alert components within
+                the ABS enclosure.
+            </p>
+
+            <p>
+                The LCD is mounted externally for
+                easy temperature monitoring, while
+                the internal components are secured
+                within the enclosure.
+            </p>
+
+            <div class="temperature-image-grid">
+
+                <figure>
+                    <img
+                        src="../images/temperature-monitoring-system/final-box-exterior.png"
+                        alt="Exterior of the completed temperature monitoring system"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        Completed temperature monitoring system
+                        with LCD display.
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img
+                        src="../images/temperature-monitoring-system/final-box-interior.png"
+                        alt="Interior electronics and wiring"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        Internal wiring and Arduino integration.
+                    </figcaption>
+                </figure>
+
+            </div>
+
+        </section>
+
+
+        <!-- CALCULATIONS -->
+        <section class="project-section">
+
+            <p class="section-number">06 / ELECTRICAL CALCULATIONS</p>
+
+            <h2>LED Current & Power Supply Analysis</h2>
+
+            <p>
+                Current-limiting resistors were selected
+                to prevent excessive current through
+                the LED indicators.
+            </p>
+
+            <p>
+                Using Kirchhoff's Voltage Law and
+                Ohm's Law, the LED current can
+                be estimated as:
+            </p>
+
+            <div class="temperature-equation">
+
+                <p>
+                    I = (V<sub>supply</sub> − V<sub>LED</sub>) / R
+                </p>
+
+            </div>
+
+            <h3>Green LED — 1 kΩ Resistor</h3>
+
+            <div class="temperature-equation">
+
+                <p>
+                    I = (5V − 2V) / 1000Ω
+                </p>
+
+                <p>
+                    I = 0.003A = 3mA
+                </p>
+
+            </div>
+
+            <h3>Red LED — 220 Ω Resistor</h3>
+
+            <div class="temperature-equation">
+
+                <p>
+                    I = (5V − 2V) / 220Ω
+                </p>
+
+                <p>
+                    I ≈ 0.0136A = 13.6mA
+                </p>
+
+            </div>
+
+            <p>
+                Both resistors limit the LED current
+                while maintaining sufficient brightness
+                for visual indication.
+            </p>
+
+            <h3>Battery Power</h3>
+
+            <p>
+                A 9V battery was selected to provide
+                portable power through the Arduino's
+                onboard voltage regulator.
+            </p>
+
+            <p>
+                The report estimates a typical battery
+                capacity of approximately 500–600mAh.
+                Actual operating time depends on
+                the total current drawn by the circuit.
+            </p>
+
+            <div class="temperature-equation">
+
+                <p>
+                    Battery Life (hours) ≈
+                    Battery Capacity (mAh) / Current Draw (mA)
+                </p>
+
+            </div>
+
+            <p>
+                External USB or DC adapter power
+                can also be used for extended operation.
+            </p>
+
+        </section>
+
+
+        <!-- RESULTS -->
+        <section class="project-section">
+
+            <p class="section-number">07 / RESULTS & EVALUATION</p>
+
+            <h2>Project Outcomes</h2>
+
+            <p>
+                The completed temperature monitoring
+                system successfully demonstrated
+                real-time temperature measurement,
+                LCD output, and automated visual
+                and audible temperature warnings.
+            </p>
+
+            <p>
+                The project combined embedded
+                programming, analog sensor
+                processing, electrical circuit
+                design, and mechanical enclosure
+                integration into a functional
+                portable device.
+            </p>
+
+            <h3>Engineering Challenges</h3>
+
+            <p>
+                The primary design limitations
+                included battery life and the
+                available space inside the enclosure.
+            </p>
+
+            <p>
+                Component placement and wiring
+                organization were important
+                considerations during assembly.
+            </p>
+
+            <h3>Future Improvements</h3>
+
+            <p>
+                Future iterations could incorporate
+                a more efficient power supply,
+                improved internal wiring organization,
+                and a smaller enclosure to
+                increase portability.
+            </p>
+
+        </section>
+
+
+        <!-- BACK -->
+        <div class="project-back">
+
+            <a href="../index.html#projects">
+                ← Back to Projects
+            </a>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

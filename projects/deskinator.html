@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Deskinator | Cici Sui</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="project-body">
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <a href="../index.html" class="logo">cicisui</a>
+
+        <nav class="nav-links">
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#experience">Experience</a>
+            <a href="../index.html#skills">Skills</a>
+            <a href="../index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <main class="deskinator-page">
+
+        <!-- HERO -->
+        <section class="deskinator-hero">
+
+            <p class="deskinator-eyebrow">
+                ENGINEERING DESIGN · SPRING 2026
+            </p>
+
+            <h1>THE DESKINATOR</h1>
+
+            <p class="deskinator-subtitle">
+                Autonomous Desk-Cleaning Robot
+            </p>
+
+            <p class="deskinator-intro">
+                A battery-powered autonomous cleaning robot designed to
+                navigate desk surfaces, detect edges, and collect debris
+                using an integrated vacuum system.
+            </p>
+
+            <div class="deskinator-tags">
+                <span>Arduino</span>
+                <span>Embedded Systems</span>
+                <span>Motor Control</span>
+                <span>Sensor Integration</span>
+                <span>CAD</span>
+            </div>
+
+            <img
+                src="../images/the-deskinator/final-product.png"
+                alt="Final Deskinator prototype"
+                class="deskinator-hero-image"
+            >
+
+            <p class="deskinator-caption">
+                Final assembled Deskinator prototype.
+            </p>
+
+        </section>
+
+
+        <!-- PROJECT INFORMATION -->
+        <section class="deskinator-section">
+
+            <div class="deskinator-info-grid">
+
+                <div>
+                    <h3>PROJECT</h3>
+                    <p>EK210 Engineering Design</p>
+                </div>
+
+                <div>
+                    <h3>INSTITUTION</h3>
+                    <p>Boston University</p>
+                </div>
+
+                <div>
+                    <h3>TEAM</h3>
+                    <p>3 Members</p>
+                </div>
+
+                <div>
+                    <h3>DATE</h3>
+                    <p>Spring 2026</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- OVERVIEW -->
+        <section class="deskinator-section">
+
+            <h2>01 / PROJECT OVERVIEW</h2>
+
+            <p>
+                The Deskinator is an autonomous desk-cleaning robot
+                developed to reduce the time and effort required
+                to clean small workspaces.
+            </p>
+
+            <p>
+                The system combines an Arduino Uno, two DC motors,
+                ultrasonic distance sensors, an infrared sensor,
+                and a centrifugal vacuum system to autonomously
+                navigate and clean a 4 ft × 4 ft surface.
+            </p>
+
+            <p>
+                Users initiate the cleaning process through a
+                touchless hand gesture. During operation, ultrasonic
+                sensors monitor the distance to the desk surface,
+                allowing the robot to detect edges and perform
+                avoidance maneuvers.
+            </p>
+
+            <p>
+                After two minutes, the system automatically stops
+                and activates an LED and buzzer to notify the user
+                that the cleaning cycle is complete.
+            </p>
+
+        </section>
+
+
+        <!-- OBJECTIVES -->
+        <section class="deskinator-section">
+
+            <h2>02 / DESIGN OBJECTIVES</h2>
+
+            <div class="deskinator-objectives">
+
+                <div class="deskinator-objective">
+                    <h3>01</h3>
+                    <h4>Autonomous Navigation</h4>
+                    <p>
+                        Navigate a 4 ft × 4 ft surface
+                        without continuous user control.
+                    </p>
+                </div>
+
+                <div class="deskinator-objective">
+                    <h3>02</h3>
+                    <h4>Edge Detection</h4>
+                    <p>
+                        Detect desk boundaries and perform
+                        avoidance maneuvers to prevent falls.
+                    </p>
+                </div>
+
+                <div class="deskinator-objective">
+                    <h3>03</h3>
+                    <h4>Debris Collection</h4>
+                    <p>
+                        Collect lightweight debris using
+                        a centrifugal blower and removable tray.
+                    </p>
+                </div>
+
+                <div class="deskinator-objective">
+                    <h3>04</h3>
+                    <h4>Touchless Operation</h4>
+                    <p>
+                        Activate the system using an
+                        infrared hand-wave sensor.
+                    </p>
+                </div>
+
+                <div class="deskinator-objective">
+                    <h3>05</h3>
+                    <h4>Time Constraint</h4>
+                    <p>
+                        Complete the cleaning operation
+                        within two minutes.
+                    </p>
+                </div>
+
+                <div class="deskinator-objective">
+                    <h3>06</h3>
+                    <h4>Budget Constraint</h4>
+                    <p>
+                        Develop a functional prototype
+                        within a $200 project budget.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FINAL VIDEO -->
+        <section class="deskinator-section">
+
+            <h2>03 / FINAL PROJECT DEMONSTRATION</h2>
+
+            <p>
+                The following video presents the completed Deskinator,
+                its mechanical and electrical design, and a demonstration
+                of its autonomous cleaning operation.
+            </p>
+
+            <video
+                class="deskinator-video"
+                controls
+                preload="metadata"
+                playsinline
+                poster="../images/the-deskinator/final-product.png"
+            >
+                <source
+                    src="../videos/final-deskinator-video.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support HTML5 video.
+            </video>
+
+        </section>
+
+
+        <!-- ELECTRICAL DESIGN -->
+        <section class="deskinator-section">
+
+            <h2>04 / ELECTRICAL SYSTEM DESIGN</h2>
+
+            <p>
+                The electrical architecture is built around an
+                Arduino Uno microcontroller responsible for
+                processing sensor inputs and controlling the
+                robot's movement and cleaning operation.
+            </p>
+
+            <img
+                src="../images/the-deskinator/full-circuit.png"
+                alt="Complete Deskinator electrical circuit diagram"
+                class="deskinator-image"
+                loading="lazy"
+            >
+
+            <p class="deskinator-caption">
+                Complete electrical circuit showing the Arduino,
+                motor driver, sensors, and power connections.
+            </p>
+
+            <h3>System Components</h3>
+
+            <div class="deskinator-component-grid">
+
+                <div>
+                    <h4>Arduino Uno</h4>
+                    <p>
+                        Central microcontroller responsible for
+                        sensor processing and system control.
+                    </p>
+                </div>
+
+                <div>
+                    <h4>L298N Motor Driver</h4>
+                    <p>
+                        Controls the direction and speed of
+                        two DC motors using PWM signals.
+                    </p>
+                </div>
+
+                <div>
+                    <h4>Ultrasonic Sensors × 2</h4>
+                    <p>
+                        Measure distance to surrounding surfaces
+                        for edge detection and avoidance.
+                    </p>
+                </div>
+
+                <div>
+                    <h4>Infrared Sensor</h4>
+                    <p>
+                        Detects hand gestures to initiate
+                        touchless cleaning operation.
+                    </p>
+                </div>
+
+                <div>
+                    <h4>Centrifugal Blower</h4>
+                    <p>
+                        Generates suction for debris collection
+                        through the vacuum nozzle.
+                    </p>
+                </div>
+
+                <div>
+                    <h4>LED & Piezo Buzzer</h4>
+                    <p>
+                        Provide visual and audible feedback
+                        upon completion of the cleaning cycle.
+                    </p>
+                </div>
+
+            </div>
+
+            <h3>Power Distribution</h3>
+
+            <p>
+                The Deskinator uses separate power sources
+                for its drive system and vacuum blower.
+            </p>
+
+            <ul>
+                <li>9V battery supply for the drive system</li>
+                <li>12V rechargeable battery pack for the centrifugal blower</li>
+                <li>L298N H-bridge for DC motor control</li>
+                <li>N-channel MOSFET for blower switching</li>
+            </ul>
+
+        </section>
+
+
+        <!-- MECHANICAL DESIGN -->
+        <section class="deskinator-section">
+
+            <h2>05 / MECHANICAL DESIGN & INTEGRATION</h2>
+
+            <p>
+                The final prototype uses a wooden enclosure
+                measuring approximately 10 × 11 × 4.5 inches.
+                The enclosure protects the internal components
+                while providing openings for sensors,
+                indicators, and the removable debris tray.
+            </p>
+            <!-- PROTOTYPE DEVELOPMENT -->
+
+<h3>Prototype Development</h3>
+
+<p>
+    The Deskinator underwent multiple design iterations before
+    reaching its final configuration. Initial prototypes focused
+    on testing the electrical system and motor functionality,
+    while later iterations introduced the mechanical housing
+    and component integration.
+</p>
+
+<div class="deskinator-image-grid">
+
+    <!-- FIRST PROTOTYPE -->
+    <figure>
+        <img
+            src="../images/the-deskinator/first-prototype.png"
+            alt="First Deskinator prototype showing the motor driver and wheel connections"
+            loading="lazy"
+        >
+
+        <figcaption>
+            First Prototype — Initial circuit integration,
+            motor driver, and wheel assembly without housing.
+        </figcaption>
+    </figure>
+
+    <!-- SECOND PROTOTYPE -->
+    <figure>
+        <img
+            src="../images/the-deskinator/second-prototype.png"
+            alt="Second Deskinator prototype with partially assembled housing"
+            loading="lazy"
+        >
+
+        <figcaption>
+            Second Prototype — Partial housing assembly
+            and integration of electrical components.
+        </figcaption>
+    </figure>
+
+</div>
+
+<p>
+    These iterations allowed us to evaluate motor operation,
+    component placement, and the integration of the electrical
+    and mechanical systems before completing the final prototype.
+</p>
+
+            <div class="deskinator-image-grid">
+
+                <figure>
+                    <img
+                        src="../images/the-deskinator/full-assembly-cad.png"
+                        alt="CAD model of the Deskinator assembly"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        CAD model of the full assembly.
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img
+                        src="../images/the-deskinator/interior-final-product.png"
+                        alt="Interior of the completed Deskinator"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        Internal component integration.
+                    </figcaption>
+                </figure>
+
+            </div>
+
+            <p>
+                Two front-mounted DC motors provide differential
+                drive, while two rear rollers support the robot.
+                The internal layout accommodates the motor driver,
+                Arduino, batteries, and vacuum assembly.
+            </p>
+
+        </section>
+
+
+        <!-- VACUUM SYSTEM -->
+        <section class="deskinator-section">
+
+            <h2>06 / VACUUM SYSTEM DEVELOPMENT</h2>
+
+            <p>
+                The debris collection mechanism consists of
+                a nozzle, external tubing, collection chamber,
+                removable tray, and centrifugal blower.
+            </p>
+
+            <p>
+                The blower creates a pressure difference that
+                draws debris through the nozzle and into the
+                collection chamber. A mesh filter prevents
+                collected debris from entering the blower.
+            </p>
+
+            <img
+                src="../images/the-deskinator/vacuum-system-sketch.png"
+                alt="Deskinator vacuum system design"
+                class="deskinator-image"
+                loading="lazy"
+            >
+
+            <p class="deskinator-caption">
+                Vacuum system concept showing the nozzle,
+                collection chamber, removable tray, and blower.
+            </p>
+
+            <h3>Vacuum Suction Testing</h3>
+
+            <p>
+                The vacuum system was tested independently
+                to evaluate its ability to collect lightweight
+                debris before final integration.
+            </p>
+
+            <video
+                class="deskinator-video"
+                controls
+                preload="metadata"
+                playsinline
+            >
+                <source
+                    src="../videos/centrifugal-vacuum-test.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support HTML5 video.
+            </video>
+
+            <p class="deskinator-caption">
+                Centrifugal vacuum suction testing.
+            </p>
+
+        </section>
+
+
+        <!-- SOFTWARE -->
+        <section class="deskinator-section">
+
+            <h2>07 / SOFTWARE & AUTONOMOUS NAVIGATION</h2>
+
+            <p>
+                The Arduino control program coordinates
+                touchless activation, motor movement,
+                ultrasonic edge detection, vacuum operation,
+                and completion notifications.
+            </p>
+
+            <img
+                src="../images/the-deskinator/code-flow-chart.png"
+                alt="Deskinator software flowchart"
+                class="deskinator-image"
+                loading="lazy"
+            >
+
+            <p class="deskinator-caption">
+                Control flowchart for the autonomous cleaning sequence.
+            </p>
+
+            <h3>Navigation Logic</h3>
+
+            <ol>
+                <li>
+                    Wait for a hand gesture detected by
+                    the infrared sensor.
+                </li>
+
+                <li>
+                    Activate the drive motors, blower,
+                    and two-minute timer.
+                </li>
+
+                <li>
+                    Continuously monitor ultrasonic
+                    distance measurements.
+                </li>
+
+                <li>
+                    When an edge is detected, stop,
+                    rotate approximately 90 degrees,
+                    and resume movement.
+                </li>
+
+                <li>
+                    Continue following a snake-style
+                    cleaning pattern.
+                </li>
+
+                <li>
+                    After two minutes, stop the motors
+                    and blower, then activate the LED
+                    and buzzer.
+                </li>
+            </ol>
+
+        </section>
+
+
+        <!-- TESTING -->
+        <section class="deskinator-section">
+
+            <h2>08 / TESTING & VALIDATION</h2>
+
+            <h3>Infrared Sensor Testing</h3>
+
+            <p>
+                The infrared sensor was evaluated through
+                repeated hand-wave detection trials.
+                Testing demonstrated approximately 90%
+                successful touchless activation.
+            </p>
+
+            <img
+                src="../images/the-deskinator/IR testing.png"
+                alt="Infrared sensor testing results"
+                class="deskinator-image"
+                loading="lazy"
+            >
+
+            <h3>Ultrasonic Sensor Testing</h3>
+
+            <p>
+                Ultrasonic distance measurements were recorded
+                while the sensor was positioned approximately
+                16 cm from a stationary surface.
+            </p>
+
+            <p>
+                Most measurements clustered around the
+                expected distance. However, occasional
+                outliers between approximately 60 cm
+                and 120 cm were observed.
+            </p>
+
+            <img
+                src="../images/the-deskinator/ultrasonic-testing.png"
+                alt="Ultrasonic sensor distance testing results"
+                class="deskinator-image"
+                loading="lazy"
+            >
+
+            <p>
+                These inconsistent readings highlighted
+                the importance of sensor validation.
+                Distance thresholds were incorporated
+                into the control logic to reduce
+                unintended avoidance maneuvers.
+            </p>
+
+            <h3>Debris Collection Testing</h3>
+
+            <p>
+                Three controlled trials were conducted
+                using approximately 30 small pieces
+                of paper per trial.
+            </p>
+
+            <p>
+                The vacuum system successfully collected
+                all test debris in these trials,
+                demonstrating 100% pickup success
+                under the tested conditions.
+            </p>
+
+        </section>
+
+
+        <!-- CALCULATIONS -->
+        <section class="deskinator-section">
+
+            <h2>09 / POWER CONSUMPTION ANALYSIS</h2>
+
+            <p>
+                Estimated power consumption was calculated
+                using the electrical power relationship:
+            </p>
+
+            <div class="deskinator-equation">
+                P = V × I
+            </div>
+
+            <h3>DC Motors</h3>
+
+            <p>
+                Each drive motor operates at a nominal
+                voltage of 3V with an assumed current
+                draw of 0.2A.
+            </p>
+
+            <div class="deskinator-equation">
+                P<sub>motor</sub> = 3V × 0.2A = 0.6W
+            </div>
+
+            <div class="deskinator-equation">
+                P<sub>motors</sub> = 2 × 0.6W = 1.2W
+            </div>
+
+            <h3>Centrifugal Blower</h3>
+
+            <p>
+                The blower operates from a 12V supply
+                with an assumed current draw of 1.0A.
+            </p>
+
+            <div class="deskinator-equation">
+                P<sub>blower</sub> = 12V × 1.0A = 12W
+            </div>
+
+            <h3>Total Estimated Power</h3>
+
+            <div class="deskinator-equation deskinator-total">
+                P<sub>total</sub> = 1.2W + 12W = 13.2W
+            </div>
+
+            <p class="deskinator-caption">
+                Estimated motor and blower power only;
+                control electronics and driver losses
+                are not included.
+            </p>
+
+        </section>
+
+
+        <!-- RESULTS -->
+        <section class="deskinator-section">
+
+            <h2>10 / RESULTS & PERFORMANCE</h2>
+
+            <div class="deskinator-results">
+
+                <div>
+                    <h3>2 MIN</h3>
+                    <p>Cleaning Cycle</p>
+                </div>
+
+                <div>
+                    <h3>~90%</h3>
+                    <p>IR Activation Success</p>
+                </div>
+
+                <div>
+                    <h3>100%</h3>
+                    <p>Debris Pickup in Controlled Trials</p>
+                </div>
+
+                <div>
+                    <h3>$105.19</h3>
+                    <p>Prototype Component Cost</p>
+                </div>
+
+            </div>
+
+            <p>
+                The final prototype successfully demonstrated
+                autonomous movement, desk-edge avoidance,
+                debris collection, touchless activation,
+                and automatic completion notification.
+            </p>
+
+            <p>
+                Although the robot did not achieve perfect
+                full-area coverage, its snake-style
+                navigation pattern covered a substantial
+                portion of the target surface.
+            </p>
+
+        </section>
+
+
+        <!-- CHALLENGES -->
+        <section class="deskinator-section">
+
+            <h2>11 / ENGINEERING CHALLENGES & LESSONS</h2>
+
+            <h3>Motor Power Delivery</h3>
+
+            <p>
+                Initial testing revealed insufficient
+                motor torque caused by incorrect
+                voltage delivery. Troubleshooting
+                emphasized the importance of verifying
+                electrical behavior under load.
+            </p>
+
+            <h3>Blower Switching</h3>
+
+            <p>
+                An incorrect component was initially
+                selected for blower control.
+                Reviewing component datasheets and
+                pin configurations helped identify
+                the issue and reinforced the importance
+                of component verification.
+            </p>
+
+            <h3>Ultrasonic Sensor Reliability</h3>
+
+            <p>
+                Inconsistent ultrasonic readings
+                required repeated testing, sensor
+                replacement attempts, and software
+                adjustments to improve edge-detection
+                reliability.
+            </p>
+
+            <h3>Key Takeaway</h3>
+
+            <p>
+                This project strengthened practical
+                experience in embedded systems,
+                circuit integration, motor control,
+                sensor troubleshooting, and
+                interdisciplinary engineering design.
+            </p>
+
+        </section>
+
+
+        <!-- BACK -->
+        <section class="deskinator-section deskinator-back">
+
+            <a href="../index.html#projects">
+                ← BACK TO PROJECTS
+            </a>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DC-DC Converter | Cici Sui</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="project-body">
+
+    <!-- NAVIGATION -->
+
+    <header class="navbar">
+
+        <a href="../index.html" class="logo">cicisui</a>
+
+        <nav class="nav-links">
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#experience">Experience</a>
+            <a href="../index.html#skills">Skills</a>
+            <a href="../index.html#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- PROJECT INTRODUCTION -->
+
+    <main class="project-page">
+
+        <section class="project-intro">
+
+            <p class="project-label">
+                POWER ELECTRONICS / TEAM PROJECT / IN PROGRESS
+            </p>
+
+            <h1>24V–12V DC-DC Converter</h1>
+
+            <p class="project-subtitle">
+                eFuse Protection Circuit Design
+            </p>
+
+            <div class="project-details">
+
+                <div>
+                    <span>MY ROLE</span>
+                    <p>eFuse Circuit Design</p>
+                </div>
+
+                <div>
+                    <span>TOOLS</span>
+                    <p>Altium Designer, Datasheet Analysis</p>
+                </div>
+
+                <div>
+                    <span>STATUS</span>
+                    <p>In Development</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- OVERVIEW -->
+
+        <section class="project-section">
+
+            <p class="section-number">01 / OVERVIEW</p>
+
+            <h2>Project Overview</h2>
+
+            <p>
+                This collaborative project focuses on developing a
+                24V-to-12V DC-DC power conversion system with integrated
+                electronic protection.
+
+                My primary responsibility was designing the eFuse
+                protection stage for the 12V output.
+
+                The eFuse provides controlled startup and protection
+                against overcurrent conditions.
+            </p>
+
+        </section>
+
+
+        <!-- DESIGN REQUIREMENTS -->
+
+        <section class="project-section">
+
+            <p class="section-number">02 / DESIGN REQUIREMENTS</p>
+
+            <h2>Defining the Requirements</h2>
+
+            <p>
+                Before beginning the circuit design, I identified the
+                electrical requirements for the eFuse protection stage.
+            </p>
+
+            <div class="spec-grid">
+
+                <div>
+                    <h3>12V</h3>
+                    <p>Nominal Output Voltage</p>
+                </div>
+
+                <div>
+                    <h3>5A</h3>
+                    <p>Continuous Current Target</p>
+                </div>
+
+                <div>
+                    <h3>7A</h3>
+                    <p>Maximum Current Requirement</p>
+                </div>
+
+                <div>
+                    <h3>10ms</h3>
+                    <p>Soft-Start Target</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CALCULATIONS -->
+
+        <section class="project-section">
+
+            <p class="section-number">03 / DATASHEET ANALYSIS</p>
+
+            <h2>From Datasheet to Component Values</h2>
+
+            <p>
+                I studied the eFuse datasheet to understand its
+                operating characteristics and configuration options.
+
+                Using the manufacturer's equations and recommended
+                operating conditions, I calculated component values
+                for current limiting, startup timing, and fault
+                protection.
+
+                These calculations informed the design of the
+                protection circuit.
+            </p>
+
+            <div class="project-image">
+                <img
+                    src="../images/powerconverter/efuse-calculations.png"
+                    alt="eFuse design calculations"
+                    loading="lazy"
+                >
+            </div>
+
+        </section>
+
+
+        <!-- EFUSE SCHEMATIC -->
+
+        <section class="project-section">
+
+            <p class="section-number">04 / CIRCUIT DESIGN</p>
+
+            <h2>Designing the eFuse Schematic</h2>
+
+            <p>
+                After determining the component values, I used
+                Altium Designer to create the eFuse schematic.
+
+                The circuit incorporates the components required
+                to configure startup behaviour, current limiting,
+                and fault response.
+            </p>
+
+            <div class="project-image">
+                <img
+                    src="../images/powerconverter/efuse-schematic.png"
+                    alt="eFuse circuit schematic designed in Altium Designer"
+                    loading="lazy"
+                >
+            </div>
+
+        </section>
+
+
+        <!-- FULL SCHEMATIC -->
+
+        <section class="project-section">
+
+            <p class="section-number">05 / SYSTEM INTEGRATION</p>
+
+            <h2>Integrating the Complete System</h2>
+
+            <p>
+                My eFuse protection circuit was integrated with
+                the DC-DC conversion stage developed by my teammate.
+
+                This process helped me understand how individual
+                circuit blocks must work together to form a
+                complete electrical system.
+            </p>
+
+            <div class="project-image">
+                <img
+                    src="../images/powerconverter/full-schematic.png"
+                    alt="Complete DC-DC converter schematic showing the integrated eFuse stage"
+                    loading="lazy"
+                >
+            </div>
+
+        </section>
+
+
+        <!-- PCB LAYOUT -->
+
+        <section class="project-section">
+
+            <p class="section-number">06 / PCB DESIGN</p>
+
+            <h2>PCB Layout & Design Considerations</h2>
+
+            <p>
+                The PCB layout stage introduced important
+                considerations beyond the schematic.
+
+                I learned about prioritising component placement,
+                organising functional circuit blocks, and the
+                importance of routing and trace layout.
+
+                Reviewing the complete board helped me better
+                understand the relationship between circuit
+                design and physical implementation.
+            </p>
+
+            <div class="project-image">
+                <img
+                    src="../images/powerconverter/board-layout.png"
+                    alt="PCB layout of the complete power conversion system"
+                    loading="lazy"
+                >
+            </div>
+
+        </section>
+<!-- 3D PCB RENDER -->
+
+<section class="project-section">
+
+    <p class="section-number">07 / 3D VISUALISATION</p>
+
+    <h2>3D PCB Design Render</h2>
+
+    <p>
+        This 3D render illustrates the physical layout of the
+        power conversion system, including component placement
+        and the overall board configuration.
+
+        It provides a visual representation of the PCB design
+        before fabrication and assembly.
+    </p>
+
+    <div class="project-image">
+        <img
+            src="../images/powerconverter/3d-board-layout.png"
+            alt="3D render of the complete DC-DC converter PCB"
+            loading="lazy"
+        >
+    </div>
+<!-- PHYSICAL PCB -->
+<div class="project-section">
+    <h2>PCB Fabrication & Assembly</h2>
+
+    <p>
+        Following the PCB design and fabrication process, the physical
+        board was assembled and prepared for testing. I assisted with
+        soldering electronic components and integrated circuit chips
+        onto the fabricated PCB, as well as testing the assembled
+        board to evaluate its functionality.
+    </p>
+
+    <img
+        src="../images/powerconverter/actual-board-product.png"
+        alt="Fabricated and assembled power converter PCB"
+        class="project-image"
+    >
+
+    <p class="image-caption">
+        Fabricated power converter PCB following component assembly.
+    </p>
+</div>
+</section>
+
+       
+
+
+        <!-- CONTRIBUTIONS -->
+
+        <section class="project-section">
+
+            <p class="section-number">08 / TEAM CONTRIBUTIONS</p>
+
+            <h2>My Contribution</h2>
+
+            <p>
+                My primary contribution was the eFuse
+                protection circuit, including datasheet
+                analysis, component calculations, and
+                schematic design.
+
+                The DC-DC conversion stage and other
+                portions of the complete system were
+                developed collaboratively with my teammate.
+            </p>
+
+        </section>
+
+
+        <!-- BACK TO PROJECTS -->
+
+        <div class="project-back">
+
+            <a href="../index.html#projects">
+                ← Back to Projects
+            </a>
+
+        </div>
+
+    </main>
+
+<body class="project-body">
+</html>

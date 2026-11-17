@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Argo Video System | Cici Sui</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="project-body">
+
+    <!-- NAVIGATION -->
+
+    <header class="navbar">
+
+        <a href="../index.html" class="logo">cicisui</a>
+
+        <nav class="nav-links">
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#experience">Experience</a>
+            <a href="../index.html#skills">Skills</a>
+            <a href="../index.html#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <main class="project-page">
+
+        <!-- PROJECT INTRODUCTION -->
+
+        <section class="project-intro">
+
+            <p class="project-label">
+                AVIONICS / RF COMMUNICATIONS / IN PROGRESS
+            </p>
+
+            <h1>Argo Video System</h1>
+
+            <p class="project-subtitle">
+                Low-Power Wireless Video Transmission for High-Altitude Rocketry
+            </p>
+
+            <div class="project-details">
+
+                <div>
+                    <span>MY ROLE</span>
+                    <p>RF Research & Hardware Evaluation</p>
+                </div>
+
+                <div>
+                    <span>TEAM</span>
+                    <p>BU Rocket Propulsion Group</p>
+                </div>
+
+                <div>
+                    <span>STATUS</span>
+                    <p>In Development</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- OVERVIEW -->
+
+        <section class="project-section">
+
+            <p class="section-number">01 / OVERVIEW</p>
+
+            <h2>Project Overview</h2>
+
+            <p>
+                The Argo Video System is being developed as part of
+                Boston University's Rocket Propulsion Group to enable
+                live wireless video transmission from a high-altitude
+                rocket to a ground receiving station.
+
+                The project combines RF communication, antenna
+                selection, embedded camera hardware, and power
+                management within the constraints of a rocket's
+                avionics system.
+            </p>
+
+            <div class="project-image">
+                <img
+                    src="../images/video-system/video-system-homepage.png"
+                    alt="Argo Video System"
+                    loading="lazy"
+                >
+            </div>
+
+        </section>
+
+
+        <!-- DESIGN REQUIREMENTS -->
+
+        <section class="project-section">
+
+            <p class="section-number">02 / DESIGN REQUIREMENTS</p>
+
+            <h2>Defining the System Requirements</h2>
+
+            <p>
+                The video system must operate within strict
+                electrical and physical constraints while
+                supporting communication over a substantial
+                distance.
+
+                These requirements guide the selection of
+                camera hardware, video transmitters, antennas,
+                and power distribution components.
+            </p>
+
+            <div class="spec-grid">
+
+                <div>
+                    <h3>100,000 ft</h3>
+                    <p>Target Flight Altitude</p>
+                </div>
+
+                <div>
+                    <h3>&lt; 2W</h3>
+                    <p>Camera + Transmitter Power Budget</p>
+                </div>
+
+                <div>
+                    <h3>Live Video</h3>
+                    <p>Transmission Objective</p>
+                </div>
+
+                <div>
+                    <h3>RF</h3>
+                    <p>Wireless Communication</p>
+                </div>
+
+            </div>
+
+            <p>
+                These specifications are design targets and
+                have not yet been validated through full-range
+                flight testing.
+            </p>
+
+        </section>
+
+
+        <!-- RF RESEARCH -->
+
+        <section class="project-section">
+
+            <p class="section-number">03 / RF COMMUNICATION</p>
+
+            <h2>Researching RF Transmission</h2>
+
+            <p>
+                A major challenge in the project is selecting
+                a suitable radio-frequency communication system.
+
+                My research has included evaluating potential
+                operating frequencies around 915 MHz and 1.2 GHz,
+                along with their implications for antenna
+                compatibility, bandwidth, power consumption,
+                and transmission range.
+
+                The transmitter and receiving antenna must
+                operate within compatible frequency ranges
+                to achieve reliable communication.
+            </p>
+
+            <div class="project-image">
+                <img
+                    src="../images/video-system/yagi-frequency-diagram.png"
+                    alt="RF antenna frequency analysis"
+                    loading="lazy"
+                >
+            </div>
+
+        </section>
+
+
+        <!-- ANTENNA SELECTION -->
+
+        <section class="project-section">
+
+            <p class="section-number">04 / ANTENNA SELECTION</p>
+
+            <h2>Evaluating Directional Antennas</h2>
+
+            <p>
+                Directional antennas are being considered for
+                the ground receiving station to improve
+                reception over long distances.
+
+                My research includes evaluating Yagi antenna
+                characteristics such as operating frequency,
+                gain, polarization, and radiation patterns.
+
+                Antenna selection is particularly important
+                because the rocket's position and orientation
+                will change throughout flight.
+            </p>
+
+            <div class="project-image">
+                <img
+                    src="../images/video-system/yagi-antenna.png"
+                    alt="Yagi antenna for ground video reception"
+                    loading="lazy"
+                >
+            </div>
+
+        </section>
+
+
+        <!-- CAMERA INTEGRATION -->
+
+        <section class="project-section">
+
+            <p class="section-number">05 / CAMERA HARDWARE</p>
+
+            <h2>Integrating the Onboard Camera</h2>
+
+            <p>
+                The onboard camera must provide a video output
+                compatible with the selected transmission
+                system while remaining within the available
+                power budget.
+
+                I have been investigating the camera's
+                electrical requirements, including its
+                supply voltage, current consumption,
+                and video output interface.
+
+                Bench testing will help verify camera
+                functionality before integration with
+                the RF transmitter.
+            </p>
+
+            <div class="project-image">
+                <img
+                    src="../images/video-system/camera.png"
+                    alt="Camera hardware for the Argo Video System"
+                    loading="lazy"
+                >
+            </div>
+
+        </section>
+
+
+        <!-- MECHANICAL INTEGRATION -->
+
+        <section class="project-section">
+
+            <p class="section-number">06 / SYSTEM INTEGRATION</p>
+
+            <h2>Integration Within the Avionics Bay</h2>
+
+            <p>
+                The camera and associated electronics must
+                fit within the rocket's avionics bay while
+                maintaining appropriate mechanical support,
+                electrical connections, and camera positioning.
+
+                The mechanical design also affects antenna
+                placement and the overall integration of
+                the video system.
+            </p>
+
+            <div class="project-image">
+                <img
+                    src="../images/video-system/avbay.png"
+                    alt="Rocket avionics bay design"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="project-image">
+                <img
+                    src="../images/video-system/meche-camera-cover.png"
+                    alt="Mechanical camera cover design"
+                    loading="lazy"
+                >
+            </div>
+
+            <p>
+                These mechanical models illustrate the wider
+                team's integration work and provide context
+                for the electrical system design.
+            </p>
+
+        </section>
+
+
+        <!-- TESTING -->
+
+        <section class="project-section">
+
+            <p class="section-number">07 / TESTING & VALIDATION</p>
+
+            <h2>Preparing for Hardware Testing</h2>
+
+            <p>
+                The next stage of development involves
+                evaluating the camera, transmitter, and
+                antenna hardware.
+
+                Planned testing includes verifying camera
+                operation, measuring electrical power
+                consumption, checking transmitter and
+                receiver compatibility, and evaluating
+                wireless video transmission.
+
+                Full-range transmission performance
+                has not yet been demonstrated.
+            </p>
+
+        </section>
+
+
+        <!-- MY CONTRIBUTIONS -->
+
+        <section class="project-section">
+
+            <p class="section-number">08 / MY CONTRIBUTIONS</p>
+
+            <h2>My Role in the Project</h2>
+
+            <p>
+                My contributions have focused on researching
+                RF transmission options, comparing antenna
+                characteristics, investigating camera power
+                requirements, and preparing for hardware testing.
+
+                Working on this project has strengthened my
+                understanding of RF communications, power
+                budgeting, and the practical challenges of
+                integrating electronics into high-altitude
+                rocket systems.
+            </p>
+
+        </section>
+
+
+        <!-- BACK TO PROJECTS -->
+
+        <div class="project-back">
+
+            <a href="../index.html#projects">
+                ← Back to Projects
+            </a>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
